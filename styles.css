@@ -38,6 +38,15 @@ header .navbar ul{
     /* display: inline-flex; */
     float: left;
  }
+ header #menu-bar{
+    display: none;
+ }
+ header label{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+    display: none;
+ }
  header .navbar ul li a{
     font-size: 13px;
     padding: 1.75em;
@@ -71,8 +80,48 @@ header .navbar ul li:hover > ul{
 }
 
 
+/* ============================
+   RESPONSIVE FOR ALL DEVICE
+===============================
+*/
+@media screen and (max-width: 992px) {
+    header{
+        padding: 20px;
+    }
 
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background-color: #eee;
+    }
 
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    header label{
+        display: initial;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    
+}
 
 
 
